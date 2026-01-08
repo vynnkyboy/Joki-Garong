@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JOKI GARONG |I`ll make you amaze with my work </title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Rubik+Mono+One&family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #fef9ed;
+            background-image: url("data:image/svg+xml,%3Csvg width='100' height='100' viewBox='0 0 100 100' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 18c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm48 25c3.866 0 7-3.134 7-7s-3.134-7-7-7-7 3.134-7 7 3.134 7 7 7zm-43-7c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm63 31c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM34 90c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zm56-76c1.657 0 3-1.343 3-3s-1.343-3-3-3-3 1.343-3 3 1.343 3 3 3zM12 86c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm28-65c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm23-11c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-6 60c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm29 22c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zM32 63c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm57-13c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm-9-21c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM60 91c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM35 41c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2zM12 60c1.105 0 2-.895 2-2s-.895-2-2-2-2 .895-2 2 .895 2 2 2z' fill='%23ffcce6' fill-opacity='0.3' fill-rule='evenodd'/%3E%3C/svg%3E");
+        }
+        .neobrutal-shadow {
+            box-shadow: 6px 6px 0px #000;
+        }
+        .neobrutal-border {
+            border: 3px solid #000;
+        }
+        .neobrutal-border-thick {
+            border: 4px solid #000;
+        }
+        .retro-text {
+            font-family: 'Press Start 2P', cursive;
+        }
+        .retro-title {
+            font-family: 'Rubik Mono One', sans-serif;
+        }
+        .scanlines {
+            position: relative;
+        }
+        .scanlines:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.03) 0px,
+                rgba(0, 0, 0, 0.03) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+        }
+        .pixel-grid {
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 0, 0, 0.1) 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+        .crt-effect {
+            border-radius: 8px;
+            box-shadow: 
+                0 0 0 3px #333,
+                inset 0 0 10px rgba(0, 0, 0, 0.3),
+                0 0 15px rgba(0, 0, 0, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        .crt-effect:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: repeating-linear-gradient(
+                0deg,
+                rgba(0, 0, 0, 0.1) 0px,
+                rgba(0, 0, 0, 0.1) 1px,
+                transparent 1px,
+                transparent 2px
+            );
+            pointer-events: none;
+        }
+        .blink {
+            animation: blink 1.5s steps(2, start) infinite;
+        }
+        @keyframes blink {
+            to {
+                visibility: hidden;
+            }
+        }
+        .glitch {
+            position: relative;
+        }
+        .glitch:before, .glitch:after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .glitch:before {
+            left: 1px;
+            text-shadow: -1px 0 #53299b;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+        .glitch:after {
+            left: -1px;
+            text-shadow: -1px 0 #00fff9;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+        @keyframes glitch-anim {
+            0% { clip: rect(42px, 9999px, 44px, 0); }
+            5% { clip: rect(12px, 9999px, 59px, 0); }
+            10% { clip: rect(48px, 9999px, 29px, 0); }
+            15% { clip: rect(42px, 9999px, 73px, 0); }
+            20% { clip: rect(63px, 9999px, 27px, 0); }
+            25% { clip: rect(34px, 9999px, 55px, 0); }
+            30% { clip: rect(86px, 9999px, 73px, 0); }
+            35% { clip: rect(20px, 9999px, 20px, 0); }
+            40% { clip: rect(26px, 9999px, 60px, 0); }
+            45% { clip: rect(25px, 9999px, 66px, 0); }
+            50% { clip: rect(57px, 9999px, 98px, 0); }
+            55% { clip: rect(5px, 9999px, 46px, 0); }
+            60% { clip: rect(82px, 9999px, 31px, 0); }
+            65% { clip: rect(54px, 9999px, 27px, 0); }
+            70% { clip: rect(28px, 9999px, 99px, 0); }
+            75% { clip: rect(45px, 9999px, 69px, 0); }
+            80% { clip: rect(23px, 9999px, 85px, 0); }
+            85% { clip: rect(54px, 9999px, 84px, 0); }
+            90% { clip: rect(45px, 9999px, 47px, 0); }
+            95% { clip: rect(37px, 9999px, 20px, 0); }
+            100% { clip: rect(4px, 9999px, 91px, 0); }
+        }
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            5% { clip: rect(52px, 9999px, 74px, 0); }
+            10% { clip: rect(79px, 9999px, 85px, 0); }
+            15% { clip: rect(75px, 9999px, 5px, 0); }
+            20% { clip: rect(67px, 9999px, 61px, 0); }
+            25% { clip: rect(14px, 9999px, 79px, 0); }
+            30% { clip: rect(1px, 9999px, 66px, 0); }
+            35% { clip: rect(86px, 9999px, 30px, 0); }
+            40% { clip: rect(23px, 9999px, 98px, 0); }
+            45% { clip: rect(85px, 9999px, 72px, 0); }
+            50% { clip: rect(71px, 9999px, 75px, 0); }
+            55% { clip: rect(2px, 9999px, 48px, 0); }
+            60% { clip: rect(30px, 9999px, 16px, 0); }
+            65% { clip: rect(59px, 9999px, 50px, 0); }
+            70% { clip: rect(41px, 9999px, 62px, 0); }
+            75% { clip: rect(2px, 9999px, 82px, 0); }
+            80% { clip: rect(47px, 9999px, 73px, 0); }
+            85% { clip: rect(3px, 9999px, 27px, 0); }
+            90% { clip: rect(26px, 9999px, 55px, 0); }
+            95% { clip: rect(42px, 9999px, 97px, 0); }
+            100% { clip: rect(38px, 9999px, 49px, 0); }
+        }
+        .pixel-art {
+            image-rendering: pixelated;
+        }
+        /* Mobile Menu Styles */
+        .mobile-menu {
+            display: none;
+        }
+        .mobile-menu.active {
+            display: block;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .hamburger span {
+            height: 3px;
+            width: 25px;
+            background: #000;
+            margin-bottom: 4px;
+            border-radius: 2px;
+        }
+        @media (max-width: 768px) {
+            .neobrutal-shadow {
+                box-shadow: 4px 4px 0px #000;
+            }
+            .desktop-nav {
+                display: none;
+            }
+            .hamburger {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen">
+    <!-- Header/Navbar -->
+    <header class="neobrutal-border-thick bg-yellow-200 p-3 mb-6 md:p-4 md:mb-8 scanlines">
+        <div class="container mx-auto flex justify-between items-center">
+            <div class="text-lg md:text-2xl retro-text neobrutal-border bg-white px-3 py-1 md:px-4 md:py-2 neobrutal-shadow flex items-center">
+                <span class="mr-1 md:mr-2">◉</span> JOKI.GARONG <span class="ml-1 md:ml-2 blink">_</span>
+            </div>
+            
+            <div class="flex items-center space-x-2 md:space-x-4">
+                <!-- Language Toggle -->
+                <button id="language-toggle" class="neobrutal-border bg-white px-2 py-1 md:px-3 md:py-1 neobrutal-shadow font-semibold hover:bg-gray-200 transition retro-text text-xs md:text-sm">
+                    EN
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="desktop-nav">
+                    <ul class="flex space-x-2 md:space-x-4">
+                        <li><a href="#" class="neobrutal-border bg-white px-2 py-1 md:px-3 md:py-1 neobrutal-shadow font-semibold hover:bg-purple-200 transition retro-text text-xs md:text-sm" data-key="nav-home">HOME</a></li>
+                        <li><a href="#services" class="neobrutal-border bg-white px-2 py-1 md:px-3 md:py-1 neobrutal-shadow font-semibold hover:bg-green-200 transition retro-text text-xs md:text-sm" data-key="nav-services">LAYANAN</a></li>
+                        <li><a href="#testimoni" class="neobrutal-border bg-white px-2 py-1 md:px-3 md:py-1 neobrutal-shadow font-semibold hover:bg-pink-200 transition retro-text text-xs md:text-sm" data-key="nav-contact">TESTIMONI</a></li>
+                    </ul>
+                </nav>
+            </div>
+            
+            <!-- Mobile Hamburger Menu -->
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu mt-4" id="mobileMenu">
+            <ul class="space-y-2">
+                <li><a href="#" class="block neobrutal-border bg-white px-3 py-2 neobrutal-shadow font-semibold hover:bg-purple-200 transition retro-text text-sm w-full text-center" data-key="nav-home">HOME</a></li>
+                <li><a href="#services" class="block neobrutal-border bg-white px-3 py-2 neobrutal-shadow font-semibold hover:bg-green-200 transition retro-text text-sm w-full text-center" data-key="nav-services">SERVICES</a></li>
+                <li><a href="#testimoni" class="block neobrutal-border bg-white px-3 py-2 neobrutal-shadow font-semibold hover:bg-pink-200 transition retro-text text-sm w-full text-center" data-key="nav-contact">TESTIMONI</a></li>
+                <li class="mt-4">
+                    <button id="mobile-language-toggle" class="block neobrutal-border bg-white px-3 py-2 neobrutal-shadow font-semibold hover:bg-gray-200 transition retro-text text-sm w-full text-center">
+                        EN
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="container mx-auto px-3 mb-10 md:px-4 md:mb-16">
+        <div class="neobrutal-border-thick bg-blue-100 p-4 md:p-8 neobrutal-shadow crt-effect">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8 items-center">
+                <div>
+                    <h1 class="text-3xl md:text-5xl lg:text-7xl font-black mb-4 md:mb-6 leading-tight retro-title glitch" data-text="WELCOME TO JOKI GARONG">
+                        <span class="text-blue-600">WELCOME TO</span>
+                        <span class="text-purple-600">JOKI</span>
+                        <span class="text-pink-500">GARONG</span>
+                    </h1>
+                    <p class="text-base md:text-xl mb-6 md:mb-8 retro-text text-xs md:text-base leading-relaxed" data-key="hero-description">
+                        <span class="font-bold">BUKAN TEMPAT KULIAH</span>, TAPI DENGAN DI SINI KAMU BISA CEPAT PUNYA IJAZAH<br>
+                        <span class="mt-2 block text-[10px] md:text-[8px]">~anjay kelas kink</span>
+                    </p>
+                    <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                        <a href="#services" class="neobrutal-border-thick bg-green-300 px-4 py-2 md:px-6 md:py-3 neobrutal-shadow font-bold text-base md:text-lg hover:bg-green-400 transition retro-text text-center" data-key="hero-portfolio">LIHAT PORTFOLIO</a>
+                        <a href="https://wa.me/628891251430?text=Saya%20ingin%20order%20jasanya%20om" class="neobrutal-border-thick bg-yellow-300 px-4 py-2 md:px-6 md:py-3 neobrutal-shadow font-bold text-base md:text-lg hover:bg-yellow-400 transition retro-text text-center" data-key="hero-contact">HUBUNGI SAYA</a>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6 md:mt-0">
+                    <div class="neobrutal-border-thick bg-white w-full max-w-md h-64 md:h-80 neobrutal-shadow flex items-center justify-center pixel-grid">
+                        <div class="text-center">
+                        <!-- Pika GIF -->
+                        <img src="https://krnqkczrwoyhwezbldqv.supabase.co/storage/v1/object/public/Asset/pika.gif" alt="Pika GIF" class="w-32 h-32 md:w-40 md:h-40 mx-auto mb-2 md:mb-4 object-contain" />
+                        <p class="mt-2 md:mt-4 retro-text text-black-500 text-xs md:text-base" data-key="hero-image-text">[ OTEWE NYARI CUAN CIK ]</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section alvin -->
+     <section id="services">
+    <section class="container mx-auto px-3 mb-10 md:px-4 md:mb-16">
+        <h2 class="text-2xl md:text-4xl font-black mb-6 md:mb-8 text-center neobrutal-border bg-white p-3 md:p-4 neobrutal-shadow inline-block mx-auto block w-fit retro-title" data-key="services-title">LAYANANKU</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div class="neobrutal-border bg-purple-100 p-4 md:p-6 neobrutal-shadow crt-effect">
+                <div class="flex items-center mb-3 md:mb-4">
+                    <div class="w-8 h-8 md:w-12 md:h-12 bg-purple-300 neobrutal-border flex items-center justify-center mr-3 md:mr-4">
+                        <span class="retro-text text-xs md:text-base">◉</span>
+                    </div>
+                    <h3 class="text-lg md:text-2xl font-bold retro-text" data-key="service1-title">WENGDEV</h3>
+                </div>
+                <p class="mb-3 md:mb-4 text-sm md:text-base" data-key="service1-desc">GWEH BUATKAN WEBSITE YANG SESUAI DENGAN KEBUTUHAN DAN KEPRIBADIAN ANDA.</p>
+            </div>
+            
+            <div class="neobrutal-border bg-green-100 p-4 md:p-6 neobrutal-shadow crt-effect">
+                <div class="flex items-center mb-3 md:mb-4">
+                    <div class="w-8 h-8 md:w-12 md:h-12 bg-green-300 neobrutal-border flex items-center justify-center mr-3 md:mr-4">
+                        <span class="retro-text text-xs md:text-base">◼</span>
+                    </div>
+                    <h3 class="text-lg md:text-2xl font-bold retro-text" data-key="service2-title">PENULISAN SKRIPSI</h3>
+                </div>
+                <p class="mb-3 md:mb-4 text-sm md:text-base" data-key="service2-desc">GWE BUATIN SEMUA BAB SKRIPSI LU FULL REVISI</p>
+            </div>
+            
+            <div class="neobrutal-border bg-yellow-100 p-4 md:p-6 neobrutal-shadow crt-effect">
+                <div class="flex items-center mb-3 md:mb-4">
+                    <div class="w-8 h-8 md:w-12 md:h-12 bg-yellow-300 neobrutal-border flex items-center justify-center mr-3 md:mr-4">
+                        <span class="retro-text text-xs md:text-base">★</span>
+                    </div>
+                    <h3 class="text-lg md:text-2xl font-bold retro-text" data-key="service3-title">PENULISAN JURNAL</h3>
+                </div>
+                <p class="mb-3 md:mb-4 text-sm md:text-base" data-key="service3-desc">BANTUIN BUAT JURNAL PENELITIAN BIAR GAK STRES LU</p>
+            </div>
+        </div>
+    </section>
+    </section>
+
+    <!-- Testimonials -->
+     <section id="testimoni">
+    <section class="container mx-auto px-3 mb-10 md:px-4 md:mb-16">
+        <h2 class="text-2xl md:text-4xl font-black mb-6 md:mb-8 text-center neobrutal-border bg-white p-3 md:p-4 neobrutal-shadow inline-block mx-auto block w-fit retro-title" data-key="testimonials-title">TESTIMONI</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
+            <div class="neobrutal-border bg-yellow-100 p-4 md:p-6 neobrutal-shadow crt-effect">
+                <div class="flex items-center mb-3 md:mb-4">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-red-300 neobrutal-border rounded-full flex items-center justify-center mr-3 md:mr-4">
+                        <span class="retro-text text-xs md:text-base">:)</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold retro-text">JHO KO WOIEE</h3>
+                        <p class="text-xs md:text-sm" data-key="testimonial1-job">TUKANG KAYU</p>
+                    </div>
+                </div>
+                <p class="italic text-sm md:text-base" data-key="testimonial1-text">"RESPON CEPAT DAN PENGERJAANNYA CEPAT DAN IJAZAH SAYA BISA LANGSUNG KELUAR"</p>
+            </div>
+            
+            <div class="neobrutal-border bg-green-100 p-4 md:p-6 neobrutal-shadow crt-effect">
+                <div class="flex items-center mb-3 md:mb-4">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-blue-300 neobrutal-border rounded-full flex items-center justify-center mr-3 md:mr-4">
+                        <span class="retro-text text-xs md:text-base">;)</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold retro-text">SARI ROWTEA</h3>
+                        <p class="text-xs md:text-sm" data-key="testimonial2-job">MAHASISWA</p>
+                    </div>
+                </div>
+                <p class="italic text-sm md:text-base" data-key="testimonial2-text">"PORTFOLIO SAYA SEKARANG TERLIHAT SANGAT PROFESIONAL DAN MENARIK, AWWHHH SUKAA DEHHHH"</p>
+            </div>
+            
+            <div class="neobrutal-border bg-purple-100 p-4 md:p-6 neobrutal-shadow crt-effect">
+                <div class="flex items-center mb-3 md:mb-4">
+                    <div class="w-12 h-12 md:w-16 md:h-16 bg-pink-300 neobrutal-border rounded-full flex items-center justify-center mr-3 md:mr-4">
+                        <span class="retro-text text-xs md:text-base">:D</span>
+                    </div>
+                    <div>
+                        <h3 class="text-lg md:text-xl font-bold retro-text">BUDIONO SIREGAR</h3>
+                        <p class="text-xs md:text-sm" data-key="testimonial3-job">KAPAL LAWD</p>
+                    </div>
+                </div>
+                <p class="italic text-sm md:text-base" data-key="testimonial3-text">"WOWWW JURNAL NYA TEMBUS SCOPUS"</p>
+            </div>
+            <p class="text-base md:text-xl mb-6 md:mb-8 retro-text text-xs md:text-base leading-relaxed">
+                <span class="mt-2 block text-[10px] md:text-[8px]" data-key="testimonials-note">ini aku ngarang bang tapi ada yang aseli kok wkkwkwk</span>
+            </p>
+        </div>
+    </section>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="container mx-auto px-3 mb-10 md:px-4 md:mb-16">
+        <div class="neobrutal-border-thick bg-purple-200 p-4 md:p-8 text-center neobrutal-shadow crt-effect">
+            <h2 class="text-2xl md:text-4xl font-black mb-3 md:mb-4 retro-title" data-key="cta-title">SIAP PUNYA IJAZAH BENERAN?</h2>
+            <p class="text-base md:text-xl mb-4 md:mb-6 max-w-2xl mx-auto retro-text text-sm md:text-base" data-key="cta-desc">DI JOKI GARONG, KAMI PERCAYA SETIAP ORANG BERHAK PUNYA IJAZAH YANG MENCERMINKAN KEPRIBADIAN MEREKA SEPERTI MANTAN PRESIDEN KONOHA.</p>
+            <a href="https://wa.me/628891251430?text=Saya%20ingin%20order%20jasanya%20om" class="neobrutal-border-thick bg-white px-4 py-2 md:px-8 md:py-4 neobrutal-shadow font-bold text-lg md:text-xl inline-block hover:bg-pink-100 transition retro-text" data-key="cta-button">ORDER SEKARANG</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="neobrutal-border-thick bg-green-200 p-4 md:p-8 scanlines">
+        <div class="container mx-auto">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+                <div>
+                    <h3 class="text-lg md:text-2xl font-bold mb-3 md:mb-4 retro-text">JOKI.GARONG</h3>
+                    <p class="retro-text text-xs md:text-base" data-key="footer-desc">TEMPAT DI MANA KAMU BISA PUNYA IJAZAH SENDIRI DAN PERSONAL.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-base md:text-xl font-bold mb-3 md:mb-4 retro-text" data-key="footer-links-title">TAUTAN CEPAT</h3>
+                    <ul class="space-y-1 md:space-y-2">
+                        <li><a href="#" class="hover:underline retro-text text-xs md:text-base" data-key="nav-home">HOME</a></li>
+                        <li><a href="#services" class="hover:underline retro-text text-xs md:text-base" data-key="nav-services">LAYANAN</a></li>
+                        <li><a href="#testimoni" class="hover:underline retro-text text-xs md:text-base" data-key="nav-contact">TESTIMONI</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-base md:text-xl font-bold mb-3 md:mb-4 retro-text" data-key="footer-contact-title">HUBUNGI AKU</h3>
+                    <p class="retro-text text-xs md:text-base">EMAIL: jokigarong12@mail.com</p>
+                    <p class="retro-text text-xs md:text-base">TELEPON: +628891251430</p>
+                    <div class="flex space-x-2 md:space-x-4 mt-2 md:mt-4">
+                        <a href="#" class="neobrutal-border bg-white w-8 h-8 md:w-10 md:h-10 flex items-center justify-center neobrutal-shadow retro-text text-xs">IG</a>
+                        <a href="#" class="neobrutal-border bg-white w-8 h-8 md:w-10 md:h-10 flex items-center justify-center neobrutal-shadow retro-text text-xs">GH</a>
+                        <a href="#" class="neobrutal-border bg-white w-8 h-8 md:w-10 md:h-10 flex items-center justify-center neobrutal-shadow retro-text text-xs">FB</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-t-2 border-black mt-4 md:mt-8 pt-3 md:pt-4 text-center">
+                <p class="retro-text text-[10px] md:text-xs lg:text-base">
+                    &copy; <span id="year-inline"></span> JOKI GARONG. ALL RIGHTS RESERVED.
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Mobile menu functionality
+        document.getElementById('hamburger').addEventListener('click', function() {
+            const mobileMenu = document.getElementById('mobileMenu');
+            mobileMenu.classList.toggle('active');
+        });
+
+        document.addEventListener('click', function(event) {
+            const hamburger = document.getElementById('hamburger');
+            const mobileMenu = document.getElementById('mobileMenu');
+            
+            if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+                mobileMenu.classList.remove('active');
+            }
+        });
+
+        // Set current year
+        (() => {
+            const y = new Date().getFullYear();
+            const el = document.getElementById('year-inline');
+            if(el) el.textContent = y;
+        })();
+
+        // Language toggle functionality
+        const languageToggle = document.getElementById('language-toggle');
+        const mobileLanguageToggle = document.getElementById('mobile-language-toggle');
+        
+        // Language data
+        const translations = {
+            id: {
+                // Navigation
+                'nav-home': 'HOME',
+                'nav-portfolio': 'PORTFOLIO',
+                'nav-services': 'SERVICES',
+                'nav-contact': 'TESTIMONI',
+                
+                // Hero section
+                'hero-description': '<span class="font-bold">BUKAN TEMPAT KULIAH</span>, TAPI DENGAN DI SINI KAMU BISA CEPAT PUNYA IJAZAH<br><span class="mt-2 block text-[10px] md:text-[8px]">~anjay kelas kink</span>',
+                'hero-portfolio': 'LIHAT LAYANAN',
+                'hero-contact': 'HUBUNGI SAYA',
+                'hero-image-text': '[ OTEWE NYARI CUAN CIK ]',
+                
+                // Services section alvin
+                'services-title': 'LAYANANKU',
+                'service1-title': 'WENGDEV',
+                'service1-desc': 'GWEH BUATKAN WEBSITE YANG SESUAI DENGAN KEBUTUHAN DAN KEPRIBADIAN ANDA.',
+                'service2-title': 'PENULISAN SKRIPSI',
+                'service2-desc': 'GWE BUATIN SEMUA BAB SKRIPSI LU FULL REVISI',
+                'service3-title': 'PENULISAN JURNAL',
+                'service3-desc': 'BANTUIN BUAT JURNAL PENELITIAN BIAR GAK STRES LU',
+                'service-more': 'SELENGKAPNYA',
+                
+                
+                // Testimonials
+                'testimonials-title': 'TESTIMONI',
+                'testimonial1-job': 'TUKANG KAYU',
+                'testimonial1-text': '"RESPON CEPAT DAN PENGERJAANNYA CEPAT DAN IJAZAH SAYA BISA LANGSUNG KELUAR"',
+                'testimonial2-job': 'MAHASISWA',
+                'testimonial2-text': '"PORTFOLIO SAYA SEKARANG TERLIHAT SANGAT PROFESIONAL DAN MENARIK, AWWHHH SUKAA DEHHHH"',
+                'testimonial3-job': 'KAPAL LAWD',
+                'testimonial3-text': '"WOWWW JURNAL NYA TEMBUS SCOPUS"',
+                'testimonials-note': 'ini aku ngarang bang tapi ada yang aseli kok wkkwkwk',
+                
+                // CTA section
+                'cta-title': 'SIAP PUNYA IJAZAH BENERAN?',
+                'cta-desc': 'DI JOKI GARONG, KAMI PERCAYA SETIAP ORANG BERHAK PUNYA IJAZAH YANG MENCERMINKAN KEPRIBADIAN MEREKA SEPERTI MANTAN PRESIDEN KONOHA.',
+                'cta-button': 'ORDER SEKARANG',
+                
+                // Footer
+                'footer-desc': 'TEMPAT DI MANA KAMU BISA PUNYA IJAZAH SENDIRI DAN PERSONAL.',
+                'footer-links-title': 'TAUTAN CEPAT',
+                'footer-contact-title': 'HUBUNGI AKU'
+            },
+            en: {
+                // Navigation
+                'nav-home': 'HOME',
+                'nav-portfolio': 'PORTFOLIO',
+                'nav-services': 'SERVICES',
+                'nav-contact': 'testimonial',
+
+                // Hero section
+                'hero-description': '<span class="font-bold">NOT A UNIVERSITY</span>, BUT HERE YOU CAN GET A DEGREE FAST<br><span class="mt-2 block text-[10px] md:text-[8px]">~wild class energy</span>',
+                'hero-portfolio': 'VIEW SERVICES',
+                'hero-contact': 'CONTACT ME',
+                'hero-image-text': '[ ON THE WAY TO GET THAT MONEY ]',
+
+                // Services section
+                'services-title': 'MY SERVICES',
+                'service1-title': 'WEB DEVELOPMENT',
+                'service1-desc': 'I BUILD WEBSITES THAT MATCH YOUR NEEDS AND PERSONALITY.',
+                'service2-title': 'THESIS WRITING',
+                'service2-desc': 'I HANDLE ALL CHAPTERS OF YOUR THESIS WITH FULL REVISIONS.',
+                'service3-title': 'JOURNAL WRITING',
+                'service3-desc': 'HELPING YOU WRITE RESEARCH JOURNALS SO YOU DON’T STRESS OUT.',
+                'service-more': 'SEE MORE',
+
+                // Testimonials
+                'testimonials-title': 'TESTIMONIALS',
+                'testimonial1-job': 'CARPENTER',
+                'testimonial1-text': '"FAST RESPONSE, FAST WORK, AND MY DEGREE WAS ISSUED IMMEDIATELY."',
+                'testimonial2-job': 'COLLEGE STUDENT',
+                'testimonial2-text': '"MY PORTFOLIO NOW LOOKS VERY PROFESSIONAL AND ATTRACTIVE, I LOVE IT!"',
+                'testimonial3-job': 'SHIP CREW',
+                'testimonial3-text': '"WOW, THE JOURNAL GOT ACCEPTED INTO SCOPUS!"',
+                'testimonials-note': 'some of these are made up bro, but some are real lol',
+
+                // CTA section
+                'cta-title': 'READY TO GET A REAL DEGREE?',
+                'cta-desc': 'AT JOKI GARONG, WE BELIEVE EVERYONE DESERVES A DEGREE THAT REFLECTS THEIR PERSONALITY, JUST LIKE A FORMER PRESIDENT OF KONOHA.',
+                'cta-button': 'ORDER NOW',
+
+                // Footer
+                'footer-desc': 'A PLACE WHERE YOU CAN HAVE YOUR OWN PERSONAL DEGREE.',
+                'footer-links-title': 'QUICK LINKS',
+                'footer-contact-title': 'TESTIMONIALS'
+
+            },
+            jp: {
+                // Navigation
+                'nav-home': 'ホーム',
+                'nav-portfolio': 'ポートフォリオ',
+                'nav-services': 'サービス',
+                'nav-contact': 'お問い合わせ',
+
+                // Hero section
+                'hero-description': '<span class="font-bold">大学ではない</span>、でもここなら早く卒業証書が手に入る<br><span class="mt-2 block text-[10px] md:text-[8px]">~ぶっ飛びクラス</span>',
+                'hero-portfolio': 'サービスを見る',
+                'hero-contact': '連絡する',
+                'hero-image-text': '[ 金を稼ぎに行く途中 ]',
+
+                // Services section
+                'services-title': '私のサービス',
+                'service1-title': 'ウェブ開発',
+                'service1-desc': 'あなたのニーズと個性に合ったウェブサイトを作ります。',
+                'service2-title': '論文執筆',
+                'service2-desc': '論文の全章を作成、修正も全部対応します。',
+                'service3-title': 'ジャーナル執筆',
+                'service3-desc': 'ストレスなく研究ジャーナルを書けるようサポートします。',
+                'service-more': 'もっと見る',
+
+                // Testimonials
+                'testimonials-title': 'お客様の声',
+                'testimonial1-job': '大工',
+                'testimonial1-text': '「対応が早く、作業もスピーディーで、卒業証書もすぐに出ました。」',
+                'testimonial2-job': '大学生',
+                'testimonial2-text': '「ポートフォリオがすごくプロっぽくなって、めっちゃ気に入ってます！」',
+                'testimonial3-job': '船員',
+                'testimonial3-text': '「なんと、ジャーナルがScopusに通りました！」',
+                'testimonials-note': '※正直に言うと、いくつかは作り話だけど、本物もあるよ（笑）',
+
+                // CTA section
+                'cta-title': '本物の卒業証書、欲しくない？',
+                'cta-desc': 'JOKI GARONGでは、誰もが自分の個性を反映した卒業証書を持つ権利があると信じています。まるで木ノ葉の元大統領みたいに。',
+                'cta-button': '今すぐ注文',
+
+                // Footer
+                'footer-desc': 'あなただけの、パーソナルな卒業証書を手に入れられる場所。',
+                'footer-links-title': 'クイックリンク',
+                'footer-contact-title': 'お客様の声'
+
+            },
+            pt: {
+                // Navigation
+                'nav-home': 'INÍCIO',
+                'nav-portfolio': 'PORTFÓLIO',
+                'nav-services': 'SERVIÇOS',
+                'nav-contact': 'CONTATO',
+
+                // Hero section
+                'hero-description': '<span class="font-bold">NÃO É UMA UNIVERSIDADE</span>, MAS AQUI VOCÊ PODE CONSEGUIR UM DIPLOMA RAPIDAMENTE<br><span class="mt-2 block text-[10px] md:text-[8px]">~energia de turma insana</span>',
+                'hero-portfolio': 'VER SERVIÇOS',
+                'hero-contact': 'FALE COMIGO',
+                'hero-image-text': '[ INDO ATRÁS DO DINHEIRO ]',
+
+                // Services section
+                'services-title': 'MEUS SERVIÇOS',
+                'service1-title': 'DESENVOLVIMENTO WEB',
+                'service1-desc': 'EU CRIO WEBSITES DE ACORDO COM SUAS NECESSIDADES E PERSONALIDADE.',
+                'service2-title': 'ESCRITA DE TCC',
+                'service2-desc': 'EU FAÇO TODOS OS CAPÍTULOS DO SEU TCC COM REVISÕES ILIMITADAS.',
+                'service3-title': 'ESCRITA DE ARTIGOS',
+                'service3-desc': 'AJUDO A ESCREVER ARTIGOS CIENTÍFICOS PRA VOCÊ NÃO FICAR ESTRESSADO.',
+                'service-more': 'VER MAIS',
+
+                // Testimonials
+                'testimonials-title': 'DEPOIMENTOS',
+                'testimonial1-job': 'CARPINTEIRO',
+                'testimonial1-text': '"RESPOSTA RÁPIDA, TRABALHO RÁPIDO E MEU DIPLOMA SAIU NA HORA."',
+                'testimonial2-job': 'ESTUDANTE UNIVERSITÁRIO',
+                'testimonial2-text': '"MEU PORTFÓLIO AGORA PARECE MUITO PROFISSIONAL E ATRAENTE, AMEIII!"',
+                'testimonial3-job': 'TRIPULANTE DE NAVIO',
+                'testimonial3-text': '"UAU, O ARTIGO FOI ACEITO NA SCOPUS!"',
+                'testimonials-note': 'alguns desses eu inventei, mas tem uns que são reais kkkkk',
+
+                // CTA section
+                'cta-title': 'PRONTO PRA TER UM DIPLOMA DE VERDADE?',
+                'cta-desc': 'NA JOKI GARONG, ACREDITAMOS QUE TODA PESSOA MERECE UM DIPLOMA QUE REFLITA SUA PERSONALIDADE, COMO UM EX-PRESIDENTE DE KONOHA.',
+                'cta-button': 'PEDIR AGORA',
+
+                // Footer
+                'footer-desc': 'UM LUGAR ONDE VOCÊ PODE TER SEU PRÓPRIO DIPLOMA, ÚNICO E PERSONALIZADO.',
+                'footer-links-title': 'LINKS RÁPIDOS',
+                'footer-contact-title': 'DEPOIMENTOS'
+
+            }
+        };
+
+        const languages = ['id', 'en', 'jp', 'pt'];
+        let currentLangIndex = 0;
+
+        // Function to update text content based on language
+        function updateLanguage(lang) {
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang] && translations[lang][key]) {
+                    if (element.tagName === 'A' || element.tagName === 'BUTTON' || element.tagName === 'SPAN') {
+                        element.textContent = translations[lang][key];
+                    } else {
+                        element.innerHTML = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Update html lang attribute
+            document.documentElement.lang = lang;
+            
+            // Save language preference
+            localStorage.setItem('preferredLanguage', lang);
+        }
+
+        // Toggle language function
+        function toggleLanguage() {
+            currentLangIndex = (currentLangIndex + 1) % languages.length;
+            const newLang = languages[currentLangIndex];
+            
+            // Update toggle button text
+            const toggleText = newLang.toUpperCase();
+            languageToggle.textContent = toggleText;
+            mobileLanguageToggle.textContent = toggleText;
+            
+            updateLanguage(newLang);
+        }
+
+        // Event listeners for language toggle
+        languageToggle.addEventListener('click', toggleLanguage);
+        mobileLanguageToggle.addEventListener('click', toggleLanguage);
+
+        // Initialize language on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedLang = localStorage.getItem('preferredLanguage');
+            if (savedLang) {
+                const savedIndex = languages.indexOf(savedLang);
+                if (savedIndex !== -1) {
+                    currentLangIndex = savedIndex;
+                }
+            }
+            
+            const currentLang = languages[currentLangIndex];
+            
+            // Update toggle button text
+            const toggleText = currentLang.toUpperCase();
+            languageToggle.textContent = toggleText;
+            mobileLanguageToggle.textContent = toggleText;
+            
+            updateLanguage(currentLang);
+        });
+    </script>
+ 
+              
+<div id="service1Modal"
+     style="display:none"
+     class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center">
+
+  <div class="bg-purple-100 neobrutal-border neobrutal-shadow p-5 md:p-6 w-[90%] max-w-md relative">
+    
+    <button id="closeService1Modal"
+            class="absolute top-2 right-2 neobrutal-border bg-red-300 px-2 font-bold">
+      ✕
+    </button>
+
+    <h3 class="text-lg md:text-xl font-bold retro-text mb-3">
+      Web Development
+    </h3>
+
+    <p class="font-bold mb-1">Bahasa Pemrograman:</p>
+    <ul class="list-disc list-inside mb-3">
+      <li>JavaScript</li>
+      <li>PHP</li>
+      <li>Python</li>
+    </ul>
+
+    <p class="font-bold mb-1">Jenis Program:</p>
+    <ul class="list-disc list-inside">
+      <li>Company Profile</li>
+      <li>E-Commerce</li>
+      <li>Sistem Informasi Akademik</li>
+      <li>Inventaris</li>
+      <li>Custom System (DLL)</li>
+    </ul>
+
+  </div>
+</div>
+
+</body>
+</html>
